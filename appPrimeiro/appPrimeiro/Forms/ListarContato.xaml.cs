@@ -28,7 +28,7 @@ namespace appPrimeiro
         public ListarContato()
         {
             InitializeComponent();
-            CarregarDados();
+            Conexao();
         }
 
         private void Conexao()
@@ -36,6 +36,7 @@ namespace appPrimeiro
             string conexaoString = "server=localhost;database=app_contato_bd;user=root;password=root;port=3360";
             conexao = new MySqlConnection(conexaoString);
             comando = conexao.CreateCommand();
+            CarregarDados();
 
             conexao.Open();
         }

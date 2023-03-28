@@ -7,14 +7,11 @@
         mc:Ignorable="d"
         Title="ListarContato" Height="450" Width="800">
     <Grid>
-        <DataGrid x:Name="dgvContato" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="56,117,56,23" SelectionChanged="dgvContato_SelectionChanged">
+        <DataGrid x:Name="dgvContato" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="56,51,56,23" SelectionChanged="dgvContato_SelectionChanged">
             <DataGrid.CellStyle>
                 <Style/>
             </DataGrid.CellStyle>
         </DataGrid>
-        <TextBox x:Name="txtBusca" HorizontalAlignment="Left" Margin="56,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="410" Height="29" FontSize="16"/>
-        <Label Content="Busca por nome:" HorizontalAlignment="Left" Margin="56,29,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
-        <Button Content="Buscar" HorizontalAlignment="Left" Margin="591,67,0,0" VerticalAlignment="Top" Height="29" Width="107" Click="Button_Click" FontSize="16" FontWeight="Bold" Background="White" BorderBrush="#FF0027FF"/>
 
     </Grid>
 </Window>
