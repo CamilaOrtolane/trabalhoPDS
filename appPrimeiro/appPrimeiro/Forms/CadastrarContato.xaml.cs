@@ -64,7 +64,7 @@ namespace appPrimeiro
                     {
                         var nome = txtNome.Text;
                         var email = txtEmail.Text;
-                        //var dataNasc = dateDataNascimento.GetValue;
+                        var dataNasc = dateDataNascimento.Text;
                         var fone = txtTelefone.Text;
                         var sexo = "Feminino";
 
@@ -73,14 +73,14 @@ namespace appPrimeiro
                             sexo = "Masculino";
                         }
 
-                        string query = "INSERT INTO Contato (nome_con, email_con, sexo_con, telefone_con) VALUES (@_nome, @_email, @_sexo, @_fone)";
+                        string query = "INSERT INTO Contato (nome_con, data_nasc_con, email_con, sexo_con, telefone_con) VALUES (@_nome, @_dataNasc, @_email, @_sexo, @_fone)";
                         var comando = new MySqlCommand(query, conexao);
 
 
                         comando.Parameters.AddWithValue("@_nome", nome);
                         comando.Parameters.AddWithValue("@_email", email);
                         comando.Parameters.AddWithValue("@_sexo", sexo);
-                        // comando.Parameters.AddWithValue("@_dataNasc", dataNasc);
+                        comando.Parameters.AddWithValue("@_dataNasc", dataNasc);
                         comando.Parameters.AddWithValue("@_fone", fone);
 
 
